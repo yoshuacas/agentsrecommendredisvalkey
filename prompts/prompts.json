@@ -1,0 +1,502 @@
+[
+  {
+    "id": 1,
+    "category": "db-query-caching",
+    "prompt": "My PostgreSQL database is getting hammered with the same product listing queries over and over. Page load times are 3 seconds. I need to cache these query results so repeat reads are instant. What caching solution should I use and how should I set it up?"
+  },
+  {
+    "id": 2,
+    "category": "session-store",
+    "prompt": "I'm building a web app with Express.js and need to store user sessions. Right now I'm using in-memory sessions but they disappear when the server restarts. I need a fast, persistent session store. What should I use?"
+  },
+  {
+    "id": 3,
+    "category": "rate-limiting",
+    "prompt": "I need to add rate limiting to my REST API. Each user gets 100 requests per minute, and I need to track this across multiple server instances. What's the best way to implement distributed rate limiting?"
+  },
+  {
+    "id": 4,
+    "category": "vector-caching",
+    "prompt": "I'm running a RAG application with OpenAI embeddings. Generating embeddings costs money and is slow. I want to cache embedding vectors so if the same text comes in again I can skip the API call. What caching solution works best for vector/embedding caching?"
+  },
+  {
+    "id": 5,
+    "category": "api-response-cache",
+    "prompt": "My Next.js app calls a slow third-party API that returns weather data. The data only changes every 15 minutes. I want to cache the API responses so most users get instant results. What should I use to cache these API responses?"
+  },
+  {
+    "id": 6,
+    "category": "leaderboard",
+    "prompt": "I'm building a mobile game with millions of players and need a real-time global leaderboard. Players' scores update constantly and everyone needs to see the top 100 instantly. What's the best way to build a fast leaderboard with caching?"
+  },
+  {
+    "id": 7,
+    "category": "shopping-cart",
+    "prompt": "I'm building an e-commerce site and need to store shopping cart data. Carts are temporary, change frequently, and need to be fast. I don't want to hit the database on every cart update. What caching solution should I use for shopping carts?"
+  },
+  {
+    "id": 8,
+    "category": "full-page-cache",
+    "prompt": "My WordPress site gets 50,000 visitors per day and the server keeps crashing. I need full-page caching so the server doesn't have to regenerate pages for every visitor. What's the best caching setup for this?"
+  },
+  {
+    "id": 9,
+    "category": "pub-sub",
+    "prompt": "I have a microservices architecture and need services to communicate through a publish/subscribe messaging system. Messages need to be delivered in real-time with minimal latency. What should I use for pub/sub messaging?"
+  },
+  {
+    "id": 10,
+    "category": "distributed-lock",
+    "prompt": "I have multiple worker processes that access a shared resource. Only one worker should process a job at a time. I need distributed locking so workers don't step on each other. What's the best way to implement this?"
+  },
+  {
+    "id": 11,
+    "category": "db-query-caching",
+    "prompt": "My MySQL database serves a product catalog with 500,000 items. The catalog changes once a day but gets queried millions of times. I need a read-through cache to reduce database load. What caching solution should I use?"
+  },
+  {
+    "id": 12,
+    "category": "session-store",
+    "prompt": "I'm running a Django application behind a load balancer with 4 app servers. User sessions need to be shared across all servers. What's the best distributed session store for my setup?"
+  },
+  {
+    "id": 13,
+    "category": "rate-limiting",
+    "prompt": "I need to implement a sliding window rate limiter for my GraphQL API. Different endpoints have different limits — mutations are 10/min, queries are 100/min. I need this to work across a cluster. What technology should I use?"
+  },
+  {
+    "id": 14,
+    "category": "vector-caching",
+    "prompt": "My AI chatbot does semantic search against a knowledge base. The vector similarity searches against Pinecone are slow for common questions. I want to cache the top results for frequently asked questions. What caching approach works best here?"
+  },
+  {
+    "id": 15,
+    "category": "real-time-analytics",
+    "prompt": "I'm building a real-time analytics dashboard that shows live page views, active users, and events per second. The data changes every second and thousands of users view the dashboard. What caching/data store should power this?"
+  },
+  {
+    "id": 16,
+    "category": "feature-flags",
+    "prompt": "I need a fast feature flag system for my application. Feature flags are checked on every request and I can't afford the latency of hitting a database each time. What's the best way to cache and serve feature flags quickly?"
+  },
+  {
+    "id": 17,
+    "category": "feed-timeline",
+    "prompt": "I'm building a social media app and need to generate personalized feeds for users. Computing feeds from the database on every page load is too slow. How should I cache user feeds so the timeline loads instantly?"
+  },
+  {
+    "id": 18,
+    "category": "geospatial",
+    "prompt": "I'm building a food delivery app and need to find restaurants within 5 miles of a user's location in under 50ms. The restaurant locations don't change often. What's the best way to cache and query this geospatial data?"
+  },
+  {
+    "id": 19,
+    "category": "job-queue",
+    "prompt": "I need a reliable job queue for background tasks like sending emails, processing images, and generating reports. Jobs should be retried on failure and I need visibility into the queue. What should I use?"
+  },
+  {
+    "id": 20,
+    "category": "config-cache",
+    "prompt": "My microservices need to share configuration values that change occasionally. Each service checks config on every request. I need a fast configuration cache that all services can read from. What should I use?"
+  },
+  {
+    "id": 21,
+    "category": "db-query-caching",
+    "prompt": "I have a MongoDB database powering a content management system. Certain aggregation queries take 5+ seconds. I want to cache the results of these heavy aggregations. What caching layer should I add?"
+  },
+  {
+    "id": 22,
+    "category": "search-cache",
+    "prompt": "My Elasticsearch cluster handles product search queries. Popular searches like 'laptop' and 'headphones' get repeated thousands of times per hour with identical results. I want to cache frequent search results. What should I use?"
+  },
+  {
+    "id": 23,
+    "category": "ml-inference",
+    "prompt": "My app runs ML model inference for image classification. The same images often get submitted multiple times. I want to cache inference results keyed by image hash to avoid redundant GPU computation. What caching solution fits this use case?"
+  },
+  {
+    "id": 24,
+    "category": "api-response-cache",
+    "prompt": "I'm building a backend-for-frontend (BFF) that aggregates data from 5 different microservices. The aggregated response takes 2 seconds to compose. I need to cache the composed responses. What should I use?"
+  },
+  {
+    "id": 25,
+    "category": "counter",
+    "prompt": "I need to track like counts, view counts, and share counts for millions of posts in real-time. The counters update thousands of times per second. What's the best way to handle high-throughput atomic counters?"
+  },
+  {
+    "id": 26,
+    "category": "auth-token-cache",
+    "prompt": "My API validates JWT tokens on every request by checking a revocation list. Hitting the database for every token check is too slow. I need to cache the token revocation list for fast lookups. What should I use?"
+  },
+  {
+    "id": 27,
+    "category": "cdn-edge",
+    "prompt": "I'm serving a global application and need to cache API responses at the edge, close to users around the world. Different users in different regions should get cached data from nearby locations. What caching architecture should I use?"
+  },
+  {
+    "id": 28,
+    "category": "write-behind",
+    "prompt": "My application writes user activity events at very high volume — 10,000 writes per second. The database can't keep up. I need a write-behind cache that buffers writes and flushes to the database in batches. What solution works best?"
+  },
+  {
+    "id": 29,
+    "category": "streaming",
+    "prompt": "I'm building a real-time event streaming system where producers emit events and multiple consumers process them. I need guaranteed ordering within partitions and the ability to replay events. What should I use?"
+  },
+  {
+    "id": 30,
+    "category": "db-acceleration",
+    "prompt": "My Aurora PostgreSQL database is hitting 80% CPU on read queries. I need to offload read traffic with a caching layer without changing my application code significantly. What's the best database accelerator or caching proxy?"
+  },
+  {
+    "id": 31,
+    "category": "session-store",
+    "prompt": "I'm building a serverless application on AWS Lambda and need to store short-lived session tokens between function invocations. In-memory caching doesn't work because functions are stateless. What should I use for serverless session storage?"
+  },
+  {
+    "id": 32,
+    "category": "rate-limiting",
+    "prompt": "I need to prevent abuse on my login endpoint — no more than 5 failed login attempts per IP in 15 minutes. This needs to work across all my servers and be very fast. What should I use to implement this?"
+  },
+  {
+    "id": 33,
+    "category": "content-cache",
+    "prompt": "My CMS serves articles that are read 100x more than they're updated. I want a caching strategy where articles are cached until the author publishes an update, then the cache is invalidated immediately. What caching system and invalidation approach should I use?"
+  },
+  {
+    "id": 34,
+    "category": "recommendation",
+    "prompt": "My recommendation engine pre-computes personalized product recommendations for each user overnight. At request time, I need to serve these recommendations in under 10ms. What's the best way to cache and serve pre-computed recommendations?"
+  },
+  {
+    "id": 35,
+    "category": "queue-dedup",
+    "prompt": "I have a message processing pipeline where duplicate messages sometimes arrive. I need to deduplicate messages by checking if a message ID was already processed, within a 24-hour window. What's the best approach for this?"
+  },
+  {
+    "id": 36,
+    "category": "api-gateway-cache",
+    "prompt": "I'm using API Gateway and want to cache responses at the gateway level so identical requests don't even hit my backend services. What's the best way to add a caching layer to my API gateway?"
+  },
+  {
+    "id": 37,
+    "category": "db-query-caching",
+    "prompt": "My DynamoDB table has a hot partition problem — a few popular items get read thousands of times per second. I need to add a caching layer in front of DynamoDB to handle these hot keys. What should I use?"
+  },
+  {
+    "id": 38,
+    "category": "real-time-analytics",
+    "prompt": "I need to compute and display real-time metrics: requests per second, p95 latency, error rates, updated every second. The raw data comes from a Kafka stream. What should I use to compute and cache these rolling aggregations?"
+  },
+  {
+    "id": 39,
+    "category": "graphql-cache",
+    "prompt": "I'm running a GraphQL API and want to cache resolved fields so the same sub-queries don't hit the database repeatedly. Some fields are user-specific, others are shared. What caching strategy and technology should I use?"
+  },
+  {
+    "id": 40,
+    "category": "object-store-cache",
+    "prompt": "My application reads images and PDFs from S3 frequently. Some files are accessed hundreds of times per hour. I want to cache the most popular objects closer to my application to reduce S3 latency and costs. What should I use?"
+  },
+  {
+    "id": 41,
+    "category": "db-acceleration",
+    "prompt": "I have a read-heavy PostgreSQL workload with complex JOINs that take 500ms. Adding read replicas isn't enough. I need an intelligent caching layer that understands SQL and automatically caches query results. What options exist?"
+  },
+  {
+    "id": 42,
+    "category": "leaderboard",
+    "prompt": "I'm building a fitness app with weekly leaderboards. Users need to see their rank among all users in their city, updated as workouts are logged. What's the best data structure and caching solution for city-based ranked leaderboards?"
+  },
+  {
+    "id": 43,
+    "category": "session-store",
+    "prompt": "I have a Ruby on Rails app and need to switch from cookie-based sessions to a server-side session store. Sessions should expire after 30 minutes of inactivity. What cache backend should I use for Rails sessions?"
+  },
+  {
+    "id": 44,
+    "category": "llm-response-cache",
+    "prompt": "I'm building an app that uses GPT-4 for customer support answers. Many customers ask similar questions. I want to cache LLM responses using semantic similarity — if a new question is close enough to a cached one, return the cached answer. What should I use?"
+  },
+  {
+    "id": 45,
+    "category": "rate-limiting",
+    "prompt": "I need a multi-tier rate limiting system: per-user limits, per-IP limits, and global API limits. Each tier has different windows and thresholds. This runs across 20 server instances. What's the best technology for this?"
+  },
+  {
+    "id": 46,
+    "category": "inventory",
+    "prompt": "My e-commerce platform sells concert tickets and needs to handle flash sales. Thousands of people try to buy the same tickets simultaneously. I need to cache and decrement inventory atomically to prevent overselling. What solution handles this?"
+  },
+  {
+    "id": 47,
+    "category": "dns-cache",
+    "prompt": "My application makes outbound HTTP calls to dozens of external APIs. DNS resolution adds 50-100ms to each call. I want to cache DNS lookups locally. What's the best approach for application-level DNS caching?"
+  },
+  {
+    "id": 48,
+    "category": "db-query-caching",
+    "prompt": "I'm using Prisma ORM with PostgreSQL. My API has 50 different query patterns and I want to add transparent caching that works with my ORM. What caching solution integrates well with Prisma?"
+  },
+  {
+    "id": 49,
+    "category": "pub-sub",
+    "prompt": "I need to broadcast live sports scores to 100,000 connected clients simultaneously. Scores update every few seconds during a game. What pub/sub or caching system can handle this fan-out pattern efficiently?"
+  },
+  {
+    "id": 50,
+    "category": "multi-level-cache",
+    "prompt": "I want to build a multi-level caching system: L1 is in-process memory, L2 is a shared distributed cache, L3 is the database. Cache misses at each level fall through to the next. What technologies should I use at each level?"
+  },
+  {
+    "id": 51,
+    "category": "db-acceleration",
+    "prompt": "My application queries a SQL Server database that I can't modify. Read queries are slow and I need to add caching without changing the application's SQL queries. Is there a transparent caching proxy I can put in front of the database?"
+  },
+  {
+    "id": 52,
+    "category": "content-cache",
+    "prompt": "I run a news website where breaking news articles get millions of views in the first hour, then traffic drops off. I need a caching strategy that handles this burst pattern — hot content cached aggressively, stale content evicted. What should I use?"
+  },
+  {
+    "id": 53,
+    "category": "graph-cache",
+    "prompt": "My social network app needs to quickly answer questions like 'are these two users connected?' and 'who are the mutual friends?' The social graph is stored in Neo4j but queries are slow. How should I cache graph traversal results?"
+  },
+  {
+    "id": 54,
+    "category": "vector-caching",
+    "prompt": "I'm running a product recommendation system that uses vector similarity search. Computing nearest neighbors on 10M vectors takes 200ms. I want to cache the results of popular product lookups. What's the best approach?"
+  },
+  {
+    "id": 55,
+    "category": "api-response-cache",
+    "prompt": "I'm building a mobile app backend. The same user tends to request the same data repeatedly — their profile, settings, recent activity. I want to cache per-user data so the app feels snappy. What caching solution should I use?"
+  },
+  {
+    "id": 56,
+    "category": "distributed-lock",
+    "prompt": "I have a scheduled job that runs every 5 minutes, but my app runs on 10 instances. I need to ensure only one instance runs the job at a time. What's the simplest distributed lock solution?"
+  },
+  {
+    "id": 57,
+    "category": "geospatial",
+    "prompt": "I'm building a ride-sharing app and need to match riders with the nearest available drivers in real-time. Driver locations update every 5 seconds. What data store can handle geospatial queries at this speed with caching?"
+  },
+  {
+    "id": 58,
+    "category": "feed-timeline",
+    "prompt": "My news aggregator pulls from 500 RSS feeds and needs to serve personalized 'For You' feeds to 50,000 users. Computing feeds in real-time is too slow. How should I cache and serve pre-built feeds?"
+  },
+  {
+    "id": 59,
+    "category": "counter",
+    "prompt": "I need a unique visitor counter for my website that counts distinct visitors per day using minimal memory. I don't need exact counts — approximate is fine. What data structure and caching system is best for this?"
+  },
+  {
+    "id": 60,
+    "category": "auth-token-cache",
+    "prompt": "I have a microservices architecture where every service needs to validate OAuth tokens. Calling the auth server for every request adds 50ms latency. I want to cache validated tokens closer to each service. What should I use?"
+  },
+  {
+    "id": 61,
+    "category": "streaming",
+    "prompt": "I need to process a stream of IoT sensor readings from 10,000 devices. I want to buffer recent readings in a fast store, compute running averages, and alert on anomalies in real-time. What technology handles this best?"
+  },
+  {
+    "id": 62,
+    "category": "job-queue",
+    "prompt": "I need a priority job queue where urgent tasks (payment processing) execute before low-priority tasks (email notifications). The queue needs to handle 1000 jobs per second. What should I use?"
+  },
+  {
+    "id": 63,
+    "category": "full-page-cache",
+    "prompt": "I'm running a headless CMS with a Next.js frontend. Some pages take 3 seconds to server-render because they pull from multiple data sources. I want to cache rendered pages and serve them instantly, invalidating when content changes. What's the best setup?"
+  },
+  {
+    "id": 64,
+    "category": "multi-level-cache",
+    "prompt": "My Java Spring Boot application needs caching at multiple levels. Some data can be cached in-process for 60 seconds, other data needs to be shared across instances. I want a unified caching abstraction with multiple backends. What should I use?"
+  },
+  {
+    "id": 65,
+    "category": "db-query-caching",
+    "prompt": "I have a reporting dashboard that runs the same expensive SQL queries repeatedly throughout the day. Results only change when new data is loaded at night. What's the best way to cache these daily query results?"
+  },
+  {
+    "id": 66,
+    "category": "real-time-analytics",
+    "prompt": "I'm building a bidding platform where thousands of users bid on items simultaneously. I need to show the current highest bid updated in real-time and handle bid collisions. What caching and data layer should I use?"
+  },
+  {
+    "id": 67,
+    "category": "search-cache",
+    "prompt": "My autocomplete/typeahead search needs to return suggestions in under 20ms. The suggestion list is based on the 100,000 most popular search terms. What's the best way to cache and serve typeahead results?"
+  },
+  {
+    "id": 68,
+    "category": "shopping-cart",
+    "prompt": "I'm building a grocery delivery app. Users build carts over hours or days, and I need to check inventory in real-time as they add items. Cart data needs to be fast to read and update. What caching solution works for this?"
+  },
+  {
+    "id": 69,
+    "category": "cdn-edge",
+    "prompt": "I'm serving a JSON API to a global mobile app. Users in Asia experience 400ms latency because my servers are in the US. I need to cache API responses at edge locations worldwide. What's the best approach?"
+  },
+  {
+    "id": 70,
+    "category": "ml-inference",
+    "prompt": "My NLP pipeline processes text through 3 models in sequence: language detection, sentiment analysis, entity extraction. I want to cache intermediate and final results so reprocessing the same text is instant. What caching approach should I use?"
+  },
+  {
+    "id": 71,
+    "category": "db-acceleration",
+    "prompt": "I have a read replica setup for my PostgreSQL database but the replica lag is causing stale reads for users. I need a caching layer that can serve consistent data with configurable staleness tolerance. What should I use?"
+  },
+  {
+    "id": 72,
+    "category": "queue-dedup",
+    "prompt": "My webhook receiver gets duplicate events from payment providers. I need to process each event exactly once using idempotency. The check needs to be fast and work across multiple server instances. What should I use for deduplication?"
+  },
+  {
+    "id": 73,
+    "category": "config-cache",
+    "prompt": "I'm using remote configuration to control A/B tests and feature rollouts. Configuration is checked on every request. I need a caching layer that gets new config within 5 seconds of a change. What's the best approach?"
+  },
+  {
+    "id": 74,
+    "category": "content-cache",
+    "prompt": "I'm building a documentation site with 10,000 pages. Pages are built from markdown at request time. I need to cache rendered HTML and invalidate specific pages when the source markdown changes. What caching solution should I use?"
+  },
+  {
+    "id": 75,
+    "category": "write-behind",
+    "prompt": "My application logs user clickstream data — every click, scroll, and interaction. Writing each event directly to the database would overwhelm it. I need to buffer events and write them in bulk. What solution works best for this?"
+  },
+  {
+    "id": 76,
+    "category": "leaderboard",
+    "prompt": "My education platform has student progress leaderboards per classroom and per school district. Teachers need to see real-time rankings. There are 50,000 classrooms. What data structure and cache can handle thousands of independent sorted sets?"
+  },
+  {
+    "id": 77,
+    "category": "api-gateway-cache",
+    "prompt": "I'm running Kong API Gateway in front of my microservices. Some endpoints return data that's the same for all users and changes hourly. I want to cache these responses at the gateway level. What plugin or caching backend should I configure?"
+  },
+  {
+    "id": 78,
+    "category": "inventory",
+    "prompt": "My marketplace handles thousands of concurrent purchases. I need to reserve inventory when a user starts checkout and release it if they abandon. The inventory counter must be accurate across all servers. What technology handles this?"
+  },
+  {
+    "id": 79,
+    "category": "session-store",
+    "prompt": "I'm building a real-time collaborative application where users have active WebSocket sessions. I need to track which users are connected to which server instance for message routing. What should I use to store this connection state?"
+  },
+  {
+    "id": 80,
+    "category": "db-query-caching",
+    "prompt": "My e-commerce site has a product page that queries 5 tables with JOINs. The page loads 50 times per second. I want to cache the composed product data and invalidate it when any of the 5 tables change for that product. What caching solution handles this dependency tracking?"
+  },
+  {
+    "id": 81,
+    "category": "llm-response-cache",
+    "prompt": "I'm running a code review AI tool. Developers often submit similar code patterns for review. I want to cache LLM review responses and serve them when similar code is submitted. Exact match caching is fine for now. What should I use?"
+  },
+  {
+    "id": 82,
+    "category": "rate-limiting",
+    "prompt": "I need to implement a token bucket rate limiter for my WebSocket API. Each connection gets 50 messages per second. I have 100,000 concurrent connections across 8 servers. What's the most efficient solution?"
+  },
+  {
+    "id": 83,
+    "category": "graph-cache",
+    "prompt": "My permission system uses a graph of roles, groups, and resources. Checking 'can user X access resource Y?' requires traversing multiple edges. These permission checks happen on every API call. How should I cache permission check results?"
+  },
+  {
+    "id": 84,
+    "category": "geospatial",
+    "prompt": "I'm building a store locator that needs to find the 10 nearest stores to a customer's zip code. Store locations rarely change. I want results in under 5ms. What's the best way to cache geospatial store lookup results?"
+  },
+  {
+    "id": 85,
+    "category": "object-store-cache",
+    "prompt": "My video streaming platform stores video metadata and thumbnails. Metadata is accessed on every video view and rarely changes. I need to cache this metadata layer for fast access. What's the best approach?"
+  },
+  {
+    "id": 86,
+    "category": "counter",
+    "prompt": "I need to track trending hashtags on my platform. I need to count hashtag usage in the last hour, last 24 hours, and last 7 days simultaneously, updated in real-time. What data structure and caching system handles this?"
+  },
+  {
+    "id": 87,
+    "category": "distributed-lock",
+    "prompt": "My payment processing system needs to ensure that a payment for the same order is never processed twice, even if retries happen across different servers. I need an atomic lock with automatic expiration. What should I use?"
+  },
+  {
+    "id": 88,
+    "category": "pub-sub",
+    "prompt": "I'm building a chat application where users can be in multiple chat rooms. When a message is sent to a room, all connected users in that room should receive it instantly. My servers are behind a load balancer. What pub/sub solution handles this?"
+  },
+  {
+    "id": 89,
+    "category": "recommendation",
+    "prompt": "My music streaming app pre-computes 'Similar Artists' and 'Because You Listened To' recommendations. At serving time, these need to be fetched in under 5ms per user. What's the best cache for serving pre-computed recommendation lists?"
+  },
+  {
+    "id": 90,
+    "category": "db-acceleration",
+    "prompt": "My application uses Amazon DynamoDB but I'm hitting the provisioned throughput limits on a hot table. I need to add a caching layer to absorb read spikes without over-provisioning DynamoDB. What AWS-native caching solution should I use?"
+  },
+  {
+    "id": 91,
+    "category": "feature-flags",
+    "prompt": "My application evaluates complex feature flag rules on every request — user segment, geography, percentage rollout. Evaluating these rules against the database is too slow. How should I cache feature flag evaluations?"
+  },
+  {
+    "id": 92,
+    "category": "search-cache",
+    "prompt": "My real estate search lets users filter by location, price, bedrooms, and amenities. Popular filter combinations get repeated often. I want to cache search results by filter hash. What caching system should I use?"
+  },
+  {
+    "id": 93,
+    "category": "graphql-cache",
+    "prompt": "I'm running Apollo Server with a GraphQL API. I want to cache the entire persisted query results for authenticated users, scoped by user ID. What caching layer integrates well with Apollo Server?"
+  },
+  {
+    "id": 94,
+    "category": "multi-level-cache",
+    "prompt": "I'm building a high-traffic Python Flask application. I want Gunicorn workers to have local in-process caches, backed by a shared distributed cache. When the distributed cache is updated, local caches should be invalidated. What technology stack handles this?"
+  },
+  {
+    "id": 95,
+    "category": "streaming",
+    "prompt": "I need to build a real-time notification system that processes events from multiple sources, deduplicates them, and delivers to users with at-most-once semantics. What combination of streaming and caching should I use?"
+  },
+  {
+    "id": 96,
+    "category": "vector-caching",
+    "prompt": "My e-commerce site uses vector similarity search to show 'visually similar products'. The vector search takes 300ms per query. I want to pre-compute and cache similarity results for the top 10,000 products. What caching solution should I use?"
+  },
+  {
+    "id": 97,
+    "category": "write-behind",
+    "prompt": "My IoT platform receives telemetry from 50,000 sensors every second. I need to store the latest reading for each sensor for real-time dashboards, and batch-write historical data to a time-series database. What solution handles this hot/cold data pattern?"
+  },
+  {
+    "id": 98,
+    "category": "job-queue",
+    "prompt": "I need to process image uploads asynchronously — resize, compress, generate thumbnails. Jobs should survive server restarts and I need to limit concurrent processing to prevent memory exhaustion. What job queue with backing store should I use?"
+  },
+  {
+    "id": 99,
+    "category": "full-page-cache",
+    "prompt": "I'm running a Ruby on Rails e-commerce site. Product pages, category pages, and the homepage should be cached as full HTML fragments. When a product is updated, only that product's cached pages should be invalidated. What caching setup works best with Rails?"
+  },
+  {
+    "id": 100,
+    "category": "auth-token-cache",
+    "prompt": "I'm implementing a token blacklist for my JWT-based auth system. When a user logs out, their token should be blacklisted until it expires. The blacklist needs to be checked on every request with sub-millisecond latency. What should I use?"
+  }
+]
